@@ -2,7 +2,7 @@ import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "../trpc";
 
-export const postRouter = createTRPCRouter({
+export const todoRouter = createTRPCRouter({
   getAll: publicProcedure.query(({ ctx }) => {
     return ctx.prisma.todo.findMany({ orderBy: { createdAt: "desc" } });
   }),

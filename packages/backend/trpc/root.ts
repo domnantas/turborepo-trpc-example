@@ -1,8 +1,8 @@
-import { postRouter } from "./router/todo";
+import { todoRouter } from "./router/todo";
 import { createTRPCRouter } from "./trpc";
 
 export const appRouter = createTRPCRouter({
-  post: postRouter,
+  todo: todoRouter,
 });
 
 // export type definition of API
